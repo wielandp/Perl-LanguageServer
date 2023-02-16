@@ -29,11 +29,11 @@ Perl::LanguageServer - Language Server and Debug Protocol Adapter for Perl
 
 =head1 VERSION
 
-Version 2.5.0
+Version 2.5.1
 
 =cut
 
-our $VERSION = '2.5.0';
+our $VERSION = '2.5.1';
 
 
 =head1 SYNOPSIS
@@ -1023,6 +1023,20 @@ CONSEQUENTIAL DAMAGES ARISING IN ANY WAY OUT OF THE USE OF THE PACKAGE,
 EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 =head1 Change Log
+
+=head2 2.5.1   C<2023-02-16>
+
+=over
+
+=item * Add sudoUser (#141)
+
+=item * Add stdin redirection (#112)
+
+=item * Add utf8 support for stdout and stderr (#76)
+
+=item * Add taint for syntax check (#143)
+
+=item * Add args as string (#149)
 
 =head2 2.5.0   C<2023-02-05>
 

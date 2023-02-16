@@ -1,5 +1,17 @@
 # Change Log
 
+## 2.5.1   `2023-02-16`
+
+- Add sudoUser (#141)
+
+- Add stdin redirection (#112)
+
+- Add utf8 support for stdout and stderr (#76)
+
+- Add taint for syntax check (#143)
+
+- Add args as string (#149)
+
 ## 2.5.0   `2023-02-05`
 
 - Set minimal Perl version to 5.16 (#91)

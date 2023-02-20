@@ -140,7 +140,7 @@ sub launch
     foreach (keys %{$self -> env})
         {
         $ENV{$_} = $self -> env -> {$_} ;
-        push @sudoargs, "$_=" . $self -> env -> {$_} ;   
+        push @sudoargs, "$_=" . $self -> env -> {$_} if $self->sudo_user;
         }
 
     my $cwd ;
@@ -171,7 +171,7 @@ sub launch
         $pid = $self -> run_async ([@sudoargs, $cmd, @inc, '-d', $fn, @{$self -> args}]) ;
         } else                      # no ref is string
         {
-        $pid = $self -> run_async (join(" ",@sudoargs).$cmd." ".join(" ",@inc)." -d $fn ".$self->args) ;
+        $pid = $self -> run_async (join(" ",map {"\"$_\""} @sudoargs)." ".$cmd." ".join(" ",@inc)." -d $fn ".$self->args) ;
         }
     }
 
